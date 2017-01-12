@@ -1,0 +1,22 @@
+{
+  "name": "(notes-node)",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kndllbrwn/nodejsLessons.git"
+  },
+  "author": "Kendall Brown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kndllbrwn/nodejsLessons/issues"
+  },
+  "homepage": "https://github.com/kndllbrwn/nodejsLessons#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
