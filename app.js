@@ -13,12 +13,22 @@ console.log('Yargs: ', argv);
 
 if (command === 'add') {
     var note = notes.addNote(argv.title, argv.body); 
-    var response = note ? `${note.title} successfully saved!` : "That title is in use!";
-    console.log(response);
+    //var response = note ? `${note.title} successfully saved!` : "That title is in use!"; 
+    //console.log(response); Ditched in favor of refactored code
+    if (note){
+        notes.logNote(note);
+    } else {
+        console.log('Note not found');
+    } 
 } else if (command === 'list') {
     notes.getAll();
 } else if (command === 'read') {
-    notes.getNote(argv.title);
+    var note = notes.getNote(argv.title);
+    if (note){
+        notes.logNote(note);
+    } else {
+        console.log('Note not found');
+    }  
 } else if (command === 'remove') {
     var noteRemoved = notes.removeNote(argv.title);
     var message = noteRemoved ? 'Note was removed' : 'Note not found';
